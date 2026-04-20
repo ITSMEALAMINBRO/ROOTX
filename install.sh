@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 mkdir -p $HOME/.ROOTX
-mkdir -p $HOME/.Codex-simu
+mkdir -p $HOME/.Rootx-simu
 mkdir -p $HOME/.toolx
 # dx color
 r='\033[1;91m'
@@ -53,7 +53,7 @@ exit_script() {
     echo -e "${c}              (\_/)"
     echo -e "              (${y}^_^${c})     ${A} ${g}Hey dear${c}"
     echo -e "             ⊂(___)づ  ⋅˚₊‧ ଳ ‧₊˚ ⋅"              
-    echo -e "\n ${g}[${n}${KER}${g}] ${c}Exiting ${g}Codex Banner \033[1;36m"
+    echo -e "\n ${g}[${n}${KER}${g}] ${c}Exiting ${g}Rootx Banner \033[1;36m"
     echo
     cd "$HOME"
     rm -rf "$HOME/ROOTX"
@@ -410,7 +410,7 @@ dxnetcheck() {
 }
 
 sync_id() {
-UPDATE_LOG="$HOME/.codex_update_id.txt"
+UPDATE_LOG="$HOME/.rootx_update_id.txt"
     if command -v curl >/dev/null 2>&1 && command -v jq >/dev/null 2>&1; then
         local sid=$(curl -s --connect-timeout 5 "$ROOTX/update" 2>/dev/null | jq -r '.id' 2>/dev/null | tr -d '[:space:]')
         [ -n "$sid" ] && [ "$sid" != "null" ] && echo "$sid" > "$UPDATE_LOG"
@@ -467,9 +467,9 @@ donotchange() {
     
     USERNAME_FILE="$D1/usernames.txt"
     INPUT_FILE="$HOME/ROOTX/files/.zshrc"
-    THEME_INPUT="$HOME/ROOTX/files/.codex.zsh-theme"
+    THEME_INPUT="$HOME/ROOTX/files/.rootx.zsh-theme"
     OUTPUT_ZSHRC="$HOME/.zshrc"
-    OUTPUT_THEME="$HOME/.oh-my-zsh/themes/codex.zsh-theme"
+    OUTPUT_THEME="$HOME/.oh-my-zsh/themes/rootx.zsh-theme"
     TEMP_FILE="$HOME/temp.zshrc"
     sed "s/DX-SIMU/$name/g" "$INPUT_FILE" > "$TEMP_FILE" &&
     sed "s/DX-SIMU/$name/g" "$THEME_INPUT" > "$OUTPUT_THEME" &&
