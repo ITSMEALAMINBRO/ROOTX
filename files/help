@@ -24,7 +24,7 @@ USER="\uf007"
 if [ -d "/data/data/com.termux/files/usr/" ]; then
     DIR="$HOME/.termux"
 else
-    DIR="$HOME/.ROOTX"
+    DIR="$HOME/.CODEX"
 fi
 
 USERNAME_FILE="$DIR/usernames.txt"
@@ -86,14 +86,14 @@ if [ $random_number -eq 0 ]; then
     echo -e "         (${y}^ω^${c})     ${g}I'm Dx-Simu${c}"
     echo -e "        ⊂(___)づ  ⋅˚₊‧ ଳ ‧₊˚ ⋅"
     echo
-    echo -e " ${A} ${c}All Command ${g}Rootx Banner¡${c}"
+    echo -e " ${A} ${c}All Command ${g}Codex Banner¡${c}"
 else
     echo -e "\n\n   ${c}___  _  _       __  __  ___  ___  _  _"
     echo -e "  ${c}(   \( \/ )___  / _)/  \(   \(  _)( \/ )"
     echo -e "  ${n} ) ) ))  ((___)( (_( () )) ) )) _) )  ("
     echo -e " ${y} (___/(_/\_)     \__)\__/(___/(___)(_/\_)"
     echo
-    echo -e " ${A} ${c}All Command ${g}Rootx Banner¡${c}"
+    echo -e " ${A} ${c}All Command ${g}Codex Banner¡${c}"
 fi
 
 # Info Section

@@ -23,7 +23,7 @@ ask() {
     echo -e "              (${p}♡ω♡${c})"
     echo -e "             ⊂(___)づ ᯓᡣ𐭩"
     echo
-    echo -e " ${C} ${y}Do you want to Update Rootx banner?${n}"
+    echo -e " ${C} ${y}Do you want to Update Codex banner?${n}"
     echo -e " ${A} ${g}Type ${y}'y'${g} or ${y}'yes'${g} to continue, otherwise cancel.${c}"
     echo
     read -p "[+]──[Select Option]────► " choice
@@ -51,7 +51,7 @@ dxnetcheck() {
     echo -e "                       ⊂(___)づ"
     echo
     echo -e "                ${g}╔════════════════╗"
-    echo -e "                ${g}║ ${n}</>  ${c}ROOT-X${g}   ║"
+    echo -e "                ${g}║ ${n}</>  ${c}CODEX-X${g}   ║"
     echo -e "                ${g}╚════════════════╝"
     echo -e "  ${g}╔════════════════════════════════════════════╗"
     echo -e "  ${g}║  ${y} Checking Your Internet Connection¡ ${g}      ║"
@@ -103,22 +103,22 @@ spin() {
 if [ -d "$HOME/.toolx" ]; then
     clear
 else
-    echo -e "\n ${g}[${n}$HOST${g}] ${c}Rootx Not Exits${n}\n"
+    echo -e "\n ${g}[${n}$HOST${g}] ${c}Codex Not Exits${n}\n"
     exit 0
 fi
 
 ask
 dxnetcheck
 banner
-echo -e " ${A} ${c}Rootx Initialization Started...${n}"
+echo -e " ${A} ${c}Codex Initialization Started...${n}"
 sleep 1.5
 
 cd "$HOME" || exit 1
-rm -rf ROOTX
+rm -rf CODEX
 git clone https://github.com/Alpha-Codex369/CODEX.git >/dev/null 2>&1 &
 spin
 
-if [ -d "ROOTX" ]; then
-    cd ROOTX || exit 1
+if [ -d "CODEX" ]; then
+    cd CODEX || exit 1
     bash install.sh
 fi

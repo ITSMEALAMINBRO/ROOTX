@@ -12,16 +12,16 @@ n='\033[1;0m'
 if [ -d "/data/data/com.termux/files/usr/" ]; then
     DIR="$HOME/.termux"
 else
-    DIR="$HOME/.ROOTX"
+    DIR="$HOME/.CODEX"
 fi
 
 USER_FILE="$DIR/usernames.txt"
 ZSHRC="$HOME/.zshrc"
-THEME="$HOME/.oh-my-zsh/themes/rootx.zsh-theme"
+THEME="$HOME/.oh-my-zsh/themes/codex.zsh-theme"
 
 # Check if file exists
 if [ ! -f "$USER_FILE" ]; then
-    echo -e "\n ${r}[×] Error: ROOTX is not fully configured or usernames.txt is missing.${n}"
+    echo -e "\n ${r}[×] Error: CODEX is not fully configured or usernames.txt is missing.${n}"
     exit 1
 fi
 

@@ -89,14 +89,14 @@ show_spinner "Oh-My-Zsh"
 rm -rf ~/.zshrc ~/.zsh_history >/dev/null 2>&1 &
 show_spinner "ZSH Configuration"
 
-# 3. Removing ROOTX Specific Directories
-rm -rf ~/.toolx ~/.Rootx-simu >/dev/null 2>&1 &
+# 3. Removing CODEX Specific Directories
+rm -rf ~/.toolx ~/.Codex-simu >/dev/null 2>&1 &
 show_spinner "ToolX & Cache Directories"
 
 # 4. Platform Specific Cleanup
 if [ -d "/data/data/com.termux/files/usr/" ]; then
-    rm -rf ~/.ROOTX >/dev/null 2>&1 &
-    show_spinner "ROOTX System Files"
+    rm -rf ~/.CODEX >/dev/null 2>&1 &
+    show_spinner "CODEX System Files"
 
     # Restoring Default Termux Look
     rm -f ~/.termux/font.ttf ~/.termux/colors.properties ~/.termux/dx.txt ~/.termux/usernames.txt ~/.termux/ads.txt >/dev/null 2>&1 &
@@ -107,8 +107,8 @@ if [ -d "/data/data/com.termux/files/usr/" ]; then
     
     termux-reload-settings
 else
-    rm -rf ~/.ROOTX >/dev/null 2>&1 &
-    show_spinner "Linux ROOTX Hidden Files"
+    rm -rf ~/.CODEX >/dev/null 2>&1 &
+    show_spinner "Linux CODEX Hidden Files"
 
     sudo rm -f /usr/share/figlet/ASCII-Shadow.flf >/dev/null 2>&1 &
     show_spinner "System Fonts"

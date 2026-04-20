@@ -133,7 +133,7 @@ trap _cleanup EXIT INT TERM
 inter() {
     clear; echo
     echo -e "                ${g}╔════════════════╗"
-    echo -e "                ${g}║ ${n}</>  ${c}ROOT-X${g}  ║"
+    echo -e "                ${g}║ ${n}</>  ${c}CODEX-X${g}  ║"
     echo -e "                ${g}╚════════════════╝"
     echo -e "  ${g}╔════════════════════════════════════════════╗"
     echo -e "  ${g}║  ${y} Checking Your Internet Connection¡ ${g}      ║"
