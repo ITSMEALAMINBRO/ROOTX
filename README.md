@@ -37,7 +37,7 @@
 ## 📱 INSTALL WITH TERMUX :
 
 ```bash
-pkg update -y && pkg upgrade -y -o Dpkg::Options::="--force-confold" && for p in curl git ncurses-utils jq python; do command -v $p >/dev/null 2>&1 || pkg install -y $p; done && git clone https://github.com/Alpha-Codex369/CODEX.git && cd CODEX/ && chmod +x * && bash install.sh
+pkg update -y && pkg upgrade -y -o Dpkg::Options::="--force-confold" && for p in curl git ncurses-utils jq python; do command -v $p >/dev/null 2>&1 || pkg install -y $p; done && git clone https://github.com/ITSMEALAMINBRO/ROOTX.git && cd ROOTX/ && chmod +x * && bash install.sh
 ```
 ---
 
