@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 mkdir -p $HOME/.ROOTX
-mkdir -p $HOME/.Rootx-simu
+mkdir -p $HOME/.Codex-simu
 mkdir -p $HOME/.toolx
 # dx color
 r='\033[1;91m'
@@ -18,8 +18,8 @@ D='\033[1;92m[\033[1;00m〄\033[1;92m]\033[1;93m'
 E='\033[1;92m[\033[1;00m×\033[1;92m]\033[1;91m'
 A='\033[1;92m[\033[1;00m+\033[1;92m]\033[1;92m'
 C='\033[1;92m[\033[1;00m</>\033[1;92m]\033[92m'
-lm='\033[96m▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱\033[0m〄\033[96m▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱\033[1;00m'
-dm='\033[93m▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱\033[0m〄\033[93m▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱\033[1;00m'
+lm='\033[96m▱▱▱▱▱▱▱▱▱▱▱▱\033[0m〄\033[96m▱▱▱▱▱▱▱▱▱▱▱▱\033[1;00m'
+dm='\033[93m▱▱▱▱▱▱▱▱▱▱▱▱\033[0m〄\033[93m▱▱▱▱▱▱▱▱▱▱▱▱\033[1;00m'
 
 # dx icon
 OS="\uf6a6"
@@ -110,9 +110,11 @@ start() {
     TOTAL_CHARS=0
     texts=(
         "「 ROOTX STARTED 」"
-        "「 HELLO DEAR USER I'M ROOTX 」"
+        "「 HELLO DEAR USER I'M DX-SIMU 」"
+        "「 ROOTX WILL PROTECT YOU 」"
         "「 GOODBYE 」"
         "「 ENJOY OUR ROOTX 」"
+        "「............... 」"
     )
     for t in "${texts[@]}"; do
         TOTAL_CHARS=$((TOTAL_CHARS + ${#t}))
@@ -410,7 +412,7 @@ dxnetcheck() {
 }
 
 sync_id() {
-UPDATE_LOG="$HOME/.rootx_update_id.txt"
+UPDATE_LOG="$HOME/.codex_update_id.txt"
     if command -v curl >/dev/null 2>&1 && command -v jq >/dev/null 2>&1; then
         local sid=$(curl -s --connect-timeout 5 "$ROOTX/update" 2>/dev/null | jq -r '.id' 2>/dev/null | tr -d '[:space:]')
         [ -n "$sid" ] && [ "$sid" != "null" ] && echo "$sid" > "$UPDATE_LOG"
@@ -467,9 +469,9 @@ donotchange() {
     
     USERNAME_FILE="$D1/usernames.txt"
     INPUT_FILE="$HOME/ROOTX/files/.zshrc"
-    THEME_INPUT="$HOME/ROOTX/files/.rootx.zsh-theme"
+    THEME_INPUT="$HOME/ROOTX/files/.codex.zsh-theme"
     OUTPUT_ZSHRC="$HOME/.zshrc"
-    OUTPUT_THEME="$HOME/.oh-my-zsh/themes/rootx.zsh-theme"
+    OUTPUT_THEME="$HOME/.oh-my-zsh/themes/codex.zsh-theme"
     TEMP_FILE="$HOME/temp.zshrc"
     sed "s/DX-SIMU/$name/g" "$INPUT_FILE" > "$TEMP_FILE" &&
     sed "s/DX-SIMU/$name/g" "$THEME_INPUT" > "$OUTPUT_THEME" &&
